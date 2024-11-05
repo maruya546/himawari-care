@@ -1,0 +1,641 @@
+@charset "utf-8";
+
+body {
+  margin: 40px 0 40px 0; 
+  box-sizing: border-box;
+  background: #fdfac9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  margin: 0 auto;
+}
+
+th {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.p {
+  width: 80%;
+  text-align: left;
+  margin: 16px auto 0;
+  text-indent: 1em;
+}
+
+/* ひまわりに戻るボタン */
+
+.himawari {
+  all: unset;
+  background: green;
+  border-radius: 8px;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: bold;
+  width: 140px;
+  height: 50px;
+  line-height: 25px;
+  font-size: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  user-select: none;
+  padding-right: 20px;
+  z-index: 1;
+}
+
+.himawari:hover {
+  opacity: .6;
+}
+
+.himawari-span {
+  font-size: 15px;
+  line-height: 10px;
+}
+
+.himawari-next {
+  font-size: 25px;
+  line-height: 0;
+  padding-left: 10px;
+  position: absolute;
+}
+
+/* タブメニュー */
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.content {
+  padding: 24px;
+  display: none;
+} 
+
+.menu {
+  list-style: none;
+  display: flex;
+  font-weight: bold;
+}
+
+.menu li a {
+  display: inline-block;
+  width: 90px;
+  text-align: center;
+  padding: 8px 0;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.menu li a.active {
+  background: #fff;
+  color: #333;
+}
+
+.menu li a:not(.active):hover {
+  opacity: .5;
+  transition: opacity .4s;
+}
+
+.content.active {
+  display: block;
+  background: #fff;
+}
+
+/* 目次 */
+
+#about {
+  text-align: center;
+}
+
+.title {
+  width: 80%;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  background: rgb(140, 140, 140);
+  padding: 8px;
+  margin: 20px auto 0;
+}
+
+#about h3 {
+  margin: 40px auto 0;
+  text-align: center;
+  font-size: 22px;
+}
+
+#about h4 {
+  margin: 20px auto 0;
+}
+
+#about ul {
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#about li:first-child {
+  margin-top: 10px;
+}
+
+#about li {
+  padding-left: 3em;
+  text-indent: -3em;
+}
+
+/* page1 のスタイリング */
+
+.title + span {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+}
+
+.explanation {
+  width: 80%;
+  text-align: left;
+  text-indent: 1em;
+  margin: 32px auto 0;
+  font-weight: bold;
+}
+
+.explanation + p {
+  width: 80%;
+  text-align: left;
+  display: block;
+  text-indent: 1em;
+  margin: 16px auto 0;
+  font-weight: bold;
+}
+
+#page1 h2 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#page1 h3 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#page1 table {
+  margin-top: 16px;
+}
+
+.corporation{
+  width: 80%;
+}
+
+.corporation td:first-child {
+  background: lightpink;
+  width: 30%;
+}
+
+.office {
+  width: 80%;
+}
+
+.office td:first-child {
+  background: skyblue;
+  width: 30%;
+}
+
+.policy {
+  width: 80%;
+}
+
+.policy td:first-child {
+  background: lightgrey;
+  width: 15%;
+  text-align: center;
+}
+
+.policy td {
+  text-align: left;
+}
+
+.policy tr:first-child td:last-child {
+  text-indent: 1em;
+}
+
+.policy ol li {
+  margin-left: 1rem;
+  text-indent: 0rem;
+}
+
+
+/* 営業日・営業時間 */
+
+.hours {
+  width: 80%;
+}
+
+.hours td:first-child {
+  background: lightgrey;
+  width: 30%;
+}
+
+/* 職員体制 */
+
+.manage {
+  width: 50%;
+}
+
+.manage td:first-child {
+  width: 50%;
+  background: lightgrey;
+}
+
+
+.post {
+  width: 80%;
+}
+
+.post thead th:first-child {
+  width: 15%;
+}
+
+.post thead th:nth-child(2) {
+  width: 75%;
+}
+
+.post tr:first-child th,
+.post tr td:first-child {
+  background: lightgrey;
+}
+
+.post ol li {
+  margin-left: 1rem;
+  text-indent: 0rem;
+  text-align: left;
+}
+
+.post tr td:nth-child(2) {
+  text-align: left;
+}
+
+
+/* ページ２ */
+
+#page2 h2,
+#page2 h3 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.service {
+  width: 80%;
+}
+
+.service thead th {
+  background: lightgrey;
+}
+
+.service tr:nth-child(1) td:first-child,
+.service tr:nth-child(2) td:first-child {
+  background: pink;
+}
+
+.service tr:nth-child(3) td:first-child {
+  background: skyblue;
+  writing-mode: vertical-rl;
+  text-align: center;
+}
+
+.service tr:nth-child(4) td:first-child,
+.service tr:nth-child(5) td:first-child,
+.service tr:nth-child(6) td:first-child,
+.service tr:nth-child(7) td:first-child,
+.service tr:nth-child(8) td:first-child,
+.service tr:nth-child(9) td:first-child,
+.service tr:nth-child(10) td:first-child {
+  background: skyblue;
+}
+
+.service tr:nth-child(11) td:first-child {
+  background: yellow;
+  writing-mode: vertical-rl;
+  text-align: center;
+}
+
+.service tr:nth-child(12) td:first-child,
+.service tr:nth-child(13) td:first-child {
+  background: yellow;
+}
+
+.vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service ol li {
+  margin-left: 1rem;
+  text-indent: 0rem;
+  text-align: left;
+}
+
+.service tr:nth-child(2) p {
+  text-indent: 1em;
+  text-align: left;
+}
+
+.service tr td:last-child {
+  text-align: left;
+}
+
+#page2 div {
+  width: 80%;
+  margin: 16px auto 0;
+  display: flex;
+}
+
+.ban {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.ban p {
+ margin-top: 16px;
+}
+
+.ban li {
+  margin-left: 1.25rem;
+  text-indent: -1.25rem;
+  padding: 4px 0 4px 0;
+}
+
+/* ページ３ */
+
+#page3 h3 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#page3 h4 {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#page3 table {
+  margin: 16px auto 0;
+}
+
+#price {
+  width: 90%;
+}
+
+#price th {
+  background: lightgrey;
+}
+
+#price tr:nth-child(1) td:first-child,
+#price tr:nth-child(2) td:first-child,
+#price tr:nth-child(3) td:first-child,
+#price tr:nth-child(4) td:first-child,
+#price tr:nth-child(5) td:first-child,
+#price tr:nth-child(6) td:first-child {
+  background: pink;
+}
+
+#price tr:nth-child(7) td:first-child,
+#price tr:nth-child(8) td:first-child,
+#price tr:nth-child(9) td:first-child,
+#price tr:nth-child(10) td:first-child,
+#price tr:nth-child(11) td:first-child,
+#price tr:nth-child(12) td:first-child {
+  background: skyblue;
+}
+
+#price tr:nth-child(13) td:first-child,
+#price tr:nth-child(14) td:first-child,
+#price tr:nth-child(15) td:first-child,
+#price tr:nth-child(16) td:first-child,
+#price tr:nth-child(17) td:first-child,
+#price tr:nth-child(18) td:first-child {
+  background: yellow;
+}
+
+.price-div, 
+.add-div,
+.payment-div {
+  width: 80%;
+  margin: 16px auto 0;
+  display: flex;
+}
+
+#add {
+  width: 90%;
+}
+
+#add th {
+  background: lightgrey;
+}
+
+#add tr td:first-child {
+  background: lightgreen;
+}
+
+#add tr td:nth-child(2) {
+  font-weight: bold;
+}
+
+#add tr:nth-child(3) td:nth-child(2),
+#add tr:nth-child(3) td:nth-child(3),
+#add tr:nth-child(3) td:nth-child(4),
+#add tr:nth-child(3) td:nth-child(5) {
+  color: red;
+}
+
+#add span {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#dec::before,
+#dec_1::before,
+#dec_2::before,
+#dec_3::before {
+  content: "▲";
+}
+
+.cost {
+  width: 70%;
+}
+
+.cost tr td:first-child {
+  background: lightgrey;
+  width: 50%;
+}
+
+.payment {
+  width: 80%;
+}
+
+.payment td:first-child {
+  background: lightgrey;
+}
+
+.payment div {
+  display: flex;
+  text-align: left;
+  padding: 4px;
+}
+
+.payment div p:first-child {
+  margin-right: 8px;
+}
+
+
+/* ページ４ */
+
+#page4 h3 {
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+#page4 div {
+  width: 80%;
+  margin: 16px auto 0;
+  display: flex;
+}
+
+#page4 div p:first-child {
+  margin-right: 8px;
+}
+
+/* 虐待防止 */
+
+#abuse {
+  width: 50%;
+  margin: 24px auto 0;
+}
+
+#abuse tr td:first-child {
+  background: lightgrey;
+  width: 50%;
+}
+
+/* 身体拘束 */
+
+#restraint {
+  width: 80%;
+  margin: 24px auto 0;
+}
+
+#restraint tr td:first-child {
+  background: pink;
+  width: 15%;
+} 
+
+#restraint tr td:last-child {
+  text-align: left;
+} 
+
+/* 秘密保持 */
+
+#personal {
+  margin-top: 24px;
+  width: 80%;
+}
+
+#personal thead {
+  background: lightgrey;
+}
+
+#personal tbody {
+  text-indent: 1em;
+  text-align: left;
+  padding: 4px;
+}
+
+/* ページ５ */
+
+#page5 h2,
+#page5 h3 {
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+#page5 div {
+  width: 80%;
+  margin: 16px auto 0;
+  display: flex;
+}
+
+#page5 div p:first-child {
+  margin-right: 8px;
+}
+
+.consultation {
+  margin: 16px auto 0;
+  width: 80%;
+}
+
+.consultation th {
+  width: 35%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.consultation td:nth-child(2) {
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 70%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  section.content {
+    margin-top: 100px;
+    padding: 24px;
+  } 
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    right: -40px;
+  }
+  
+  .menu li a {
+    display: inline-block;
+    writing-mode: vertical-rl;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    padding: 8px 0;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0 4px 4px 0;
+  }  
+}
